@@ -8,9 +8,33 @@ import MovieApp from "./apps/MovieApp";
 import MovieApp2 from "./apps/MovieApp2";
 import NightAndDay from "./apps/NightAndDay";
 import WhotGame from "./apps/whot";
+import SelectArtist from "./apps/SelectArtist";
+import AppLoading from "expo-app-loading";
+import {
+  useFonts,
+  WorkSans_300Light,
+  WorkSans_400Regular,
+  WorkSans_500Medium,
+  WorkSans_600SemiBold,
+  WorkSans_700Bold,
+  WorkSans_900Black,
+} from "@expo-google-fonts/work-sans";
 
 export default function App() {
-  return <Clothline />;
+  let [fontsLoaded] = useFonts({
+    WorkSans_300Light,
+    WorkSans_400Regular,
+    WorkSans_500Medium,
+    WorkSans_600SemiBold,
+    WorkSans_700Bold,
+    WorkSans_900Black,
+  });
+
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  } else {
+    return <SelectArtist />;
+  }
 }
 
 const styles = StyleSheet.create({

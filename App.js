@@ -19,6 +19,7 @@ import {
   WorkSans_700Bold,
   WorkSans_900Black,
 } from "@expo-google-fonts/work-sans";
+import EnterPassword from "./apps/EnterPassword";
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -33,7 +34,7 @@ export default function App() {
   if (!fontsLoaded) {
     return <AppLoading />;
   } else {
-    return <SelectArtist />;
+    return <EnterPassword />;
   }
 }
 

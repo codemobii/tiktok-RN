@@ -5,7 +5,6 @@ import {
   Dimensions,
   Animated,
   TouchableOpacity,
-  FlatList,
   ScrollView,
 } from "react-native";
 import React, { useState, useEffect, useRef } from "react";
